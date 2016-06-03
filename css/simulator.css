@@ -4,6 +4,9 @@ body {
     color: #222;
     font-size: 14px;
 }
+/*.sim_wrapper{
+    display: none;
+}*/
 .wx_phone_preview {
     position: fixed;
     top: 50%;
@@ -267,4 +270,12 @@ body {
     opacity: .75;
     background-color: #000;
     z-index: 9995;
+}
+.wx_phone_preview_multi_card .card_cover_appmsg_inner {
+    position: relative;
+    height: 140px;
+    overflow: hidden;
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;
 }
