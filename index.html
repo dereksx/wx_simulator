@@ -14,53 +14,45 @@
                 <em class="histroy_back"></em>
             </div>
             <div class="wx_phone_bd wx_phone_preview_card_wrp">
-                <div  id="page_detail"></div>
+                <div id="page_detail"></div>
                 <div id="page_container">
                     <script id="simulator_single_pic" type="text/x-handlebars-template">
-                    {{#each this}}
-                    <div class="msg_card wx_phone_preview_card jsPhoneViewCard" data-index="0">
-                        <div class="msg_card_inner">
-                            <div class="msg_card_bd">
-                                <h4 class="msg_card_title" title="">{{title}}</h4>
-                                <div class="msg_card_info">
-                                    06月01日
+                        {{#each this}}
+                        <div class="msg_card wx_phone_preview_card jsPhoneViewCard" data-index="0">
+                            <div class="msg_card_inner">
+                                <div class="msg_card_bd">
+                                    <h4 class="msg_card_title" title="">{{title}}</h4>
+                                    <div class="msg_card_info">
+                                        06月01日
+                                    </div>
+                                    <div class="msg_card_extra_info"
+                                         style="background-image:url({{thumbUrl}});">
+                                        <!--<img class="appmsg_thumb" src="">-->
+                                    </div>
+                                    <div class="msg_card_desc" title="">{{digest}}</div>
                                 </div>
-                                <div class="msg_card_extra_info"
-                                     style="background-image:url({{thumbUrl}});">
-                                    <!--<img class="appmsg_thumb" src="">-->
+                                <div class="msg_card_ft">
+                                    <i class="icon_arrow_default"></i>
+                                    阅读原文
                                 </div>
-                                <div class="msg_card_desc" title="">{{digest}}</div>
-                            </div>
-                            <div class="msg_card_ft">
-                                <i class="icon_arrow_default"></i>
-                                阅读原文
                             </div>
                         </div>
-                    </div>
-                    {{/each}}
-                </script>
+                        {{/each}}
+                    </script>
                     <script id="simulator_multi_pic" type="text/x-handlebars-template">
-                    <div class="msg_card wx_phone_preview_multi_card has_first_cover">
-                        <div class="msg_card_inner">
-    <!--                        <div class="card_cover_appmsg_item jsPhoneViewCard" data-index="0">
-
-                                <div class="card_cover_appmsg_inner" style="background-image:url('https://mmbiz.qlogo.cn/mmbiz/ibyhknicDSfe7jFRaHibTOGOzaRyRAl9FG6ib34d3LjGFeQs0ac2MF7vC7h5qajkYZ5Kzc3JPPVu0KXfagdD07sjug/0?wx_fmt=jpeg');">
-                                    &lt;!&ndash;<img class="card_cover_thumb" src="">&ndash;&gt;
+                        <div class="msg_card wx_phone_preview_multi_card has_first_cover">
+                            <div class="msg_card_inner">
+                                {{#each this}}
+                                <div class="card_appmsg_item jsPhoneViewCard">
+                                    {{#if thumbUrl}}
+                                    <img class="card_appmsg_thumb" src="{{thumbUrl}}">
+                                    {{/if}}
+                                    <div class="card_appmsg_content">{{title}}</div>
                                 </div>
-
-                                <strong class="card_cover_title" title="">小布123dddd</strong>
-
-                            </div>-->
-                            {{#each this}}
-                            <div class="card_appmsg_item jsPhoneViewCard" data-index="0">
-                                {{#if thumbUrl}}
-                                <img class="card_appmsg_thumb" src="{{thumbUrl}}">
-                                {{/if}}
-                                <div class="card_appmsg_content">{{title}}</div>
+                                {{/each}}
                             </div>
-                            {{/each}}
-                    </div>
-                </script>
+                        </div>
+                    </script>
                 </div>
             </div>
 
@@ -69,7 +61,8 @@
     <div class="mask"></div>
 </div>
 <!--<input type="hidden" name="material_content" id="material_content" value="[{&quot;url&quot;: &quot;http://114.64.253.85:10101/materials/author=%25E9%25B2%2581%25E8%25BF%2585&amp;content=%253Cp%253E%25E6%2590%259C%25E9%259B%2586%25E4%25BA%2586%25E5%2585%25AC%25E5%2585%2583%25E5%2589%258D11%25E4%25B8%2596%25E7%25BA%25AA%25E8%2587%25B3%25E5%2589%258D6%25E4%25B8%2596%25E7%25BA%25AA%25E7%259A%2584%25E5%258F%25A4%25E4%25BB%25A3%25E8%25AF%2597%25E6%25AD%258C305%25E9%25A6%2596%25EF%25BC%258C%25E9%2599%25A4%25E6%25AD%25A4%25E4%25B9%258B%25E5%25A4%2596%25E8%25BF%2598%25E6%259C%25896%25E7%25AF%2587%25E6%259C%2589%25E9%25A2%2598%25E7%259B%25AE%25E6%2597%25A0%25E5%2586%2585%25E5%25AE%25B9%25EF%25BC%258C%25E5%258D%25B3%25E6%259C%2589%25E7%259B%25AE%25E6%2597%25A0%25E8%25BE%259E%25EF%25BC%258C%25E7%25A7%25B0%25E4%25B8%25BA%25E7%25AC%2599%25E8%25AF%2597%25E5%2585%25AD%25E7%25AF%2587%25EF%25BC%2588%253Ca+target%253D%2522_blank%2522+href%253D%2522http%253A%252F%252Fbaike.baidu.com%252Fview%252F3234917.htm%2522%253E%25E5%258D%2597%25E9%2599%2594%253C%252Fa%253E%25E3%2580%2581%253Ca+target%253D%2522_blank%2522+href%253D%2522http%253A%252F%252Fbaike.baidu.com%252Fsubview%252F594612%252F10447391.htm%2522%253E%25E7%2599%25BD%25E5%258D%258E%253C%252Fa%253E%25E3%2580%2581%25E5%258D%258E%25E9%25BB%258D%25E3%2580%2581%25E7%2594%25B1%25E5%25BA%25B7%25E3%2580%2581%25E5%25B4%2587%25E4%25BC%258D%25E3%2580%2581%253Ca+target%253D%2522_blank%2522+href%253D%2522http%253A%252F%252Fbaike.baidu.com%252Fview%252F2340545.htm%2522%253E%25E7%2594%25B1%25E4%25BB%25AA%253C%252Fa%253E%25EF%25BC%2589%25EF%25BC%258C%25E5%258F%258D%25E6%2598%25A0%25E4%25BA%2586%253Ca+target%253D%2522_blank%2522+href%253D%2522http%253A%252F%252Fbaike.baidu.com%252Fsubview%252F27039%252F13090759.htm%2522%253E%25E8%25A5%25BF%25E5%2591%25A8%253C%252Fa%253E%25E5%2588%259D%25E6%259C%259F%25E5%2588%25B0%253Ca+target%253D%2522_blank%2522+href%253D%2522http%253A%252F%252Fbaike.baidu.com%252Fsubview%252F27201%252F4964267.htm%2522%253E%25E6%2598%25A5%25E7%25A7%258B%253C%252Fa%253E%25E4%25B8%25AD%25E5%258F%25B6%25E7%25BA%25A6%25E4%25BA%2594%25E7%2599%25BE%25E5%25B9%25B4%25E9%2597%25B4%25E7%259A%2584%25E7%25A4%25BE%25E4%25BC%259A%25E9%259D%25A2%25E8%25B2%258C%253C%252Fp%253E&amp;contentSourceUrl=&amp;digest=%25E8%25AF%2597%25E7%25BB%258F%25E3%2580%258B%25E6%2598%25AF%25E4%25B8%25AD%25E5%259B%25BD%25E5%258F%25A4%25E4%25BB%25A3%25E8%25AF%2597%25E6%25AD%258C%25E5%25BC%2580%25E7%25AB%25AF%25EF%25BC%258C%25E6%259C%2580%25E6%2597%25A9%25E7%259A%2584%25E4%25B8%2580%25E9%2583%25A8%25E8%25AF%2597%25E6%25AD%258C%25E6%2580%25BB%25E9%259B%2586&amp;showCoverPic=0&amp;thumbUrl=http%253A%252F%252F7xpt07.com1.z0.glb.clouddn.com%252FFnbnLEBt9G2TGrrvoWJaPOVXRq2t&amp;title=%25E6%2598%25A5%25E5%2585%2589%25E7%2581%25BF%25E7%2583%2582/show/0&quot;, &quot;title&quot;: &quot;春光灿烂&quot;, &quot;author&quot;: &quot;鲁迅&quot;, &quot;digest&quot;: &quot;诗经》是中国古代诗歌开端，最早的一部诗歌总集&quot;, &quot;content&quot;: &quot;&lt;p&gt;搜集了公元前11世纪至前6世纪的古代诗歌305首，除此之外还有6篇有题目无内容，即有目无辞，称为笙诗六篇（&lt;a target=\&quot;_blank\&quot; href=\&quot;http://baike.baidu.com/view/3234917.htm\&quot;&gt;南陔&lt;/a&gt;、&lt;a target=\&quot;_blank\&quot; href=\&quot;http://baike.baidu.com/subview/594612/10447391.htm\&quot;&gt;白华&lt;/a&gt;、华黍、由康、崇伍、&lt;a target=\&quot;_blank\&quot; href=\&quot;http://baike.baidu.com/view/2340545.htm\&quot;&gt;由仪&lt;/a&gt;），反映了&lt;a target=\&quot;_blank\&quot; href=\&quot;http://baike.baidu.com/subview/27039/13090759.htm\&quot;&gt;西周&lt;/a&gt;初期到&lt;a target=\&quot;_blank\&quot; href=\&quot;http://baike.baidu.com/subview/27201/4964267.htm\&quot;&gt;春秋&lt;/a&gt;中叶约五百年间的社会面貌&lt;/p&gt;&quot;, &quot;thumbUrl&quot;: &quot;http://7xpt07.com1.z0.glb.clouddn.com/FnbnLEBt9G2TGrrvoWJaPOVXRq2t&quot;, &quot;showCoverPic&quot;: 0, &quot;contentSourceUrl&quot;: &quot;&quot;}, {&quot;url&quot;: &quot;http://114.64.253.85:10101/materials/author=%25E5%25B0%258F%25E6%2598%258E&amp;content=%253Cp%253E%25E3%2580%258A%25E8%25AF%2597%25E7%25BB%258F%25E3%2580%258B%25E4%25BD%259C%25E8%2580%2585%25E4%25BD%259A%25E5%2590%258D%25EF%25BC%258C%25E4%25BC%25A0%25E4%25B8%25BA%253Ca+target%253D%2522_blank%2522+href%253D%2522http%253A%252F%252Fbaike.baidu.com%252Fview%252F29545.htm%2522%253E%25E5%25B0%25B9%25E5%2590%2589%25E7%2594%25AB%253C%252Fa%253E%25E9%2587%2587%25E9%259B%2586%25E3%2580%2581%253Ca+target%253D%2522_blank%2522+href%253D%2522http%253A%252F%252Fbaike.baidu.com%252Fsubview%252F2176%252F5070682.htm%2522%253E%25E5%25AD%2594%25E5%25AD%2590%253C%252Fa%253E%25E7%25BC%2596%25E8%25AE%25A2%25E3%2580%2582%25E6%259C%2580%25E5%2588%259D%25E5%258F%25AA%25E7%25A7%25B0%25E4%25B8%25BA%25E2%2580%259C%25E8%25AF%2597%25E2%2580%259D%25E6%2588%2596%25E2%2580%259C%25E8%25AF%2597%25E4%25B8%2589%25E7%2599%25BE%25E2%2580%259D%25EF%25BC%258C%25E5%2588%25B0%253Ca+target%253D%2522_blank%2522+href%253D%2522http%253A%252F%252Fbaike.baidu.com%252Fview%252F20338.htm%2522%253E%25E8%25A5%25BF%25E6%25B1%2589%253C%252Fa%253E%25E6%2597%25B6%25EF%25BC%258C%25E8%25A2%25AB%25E5%25B0%258A%25E4%25B8%25BA%25E5%2584%2592%25E5%25AE%25B6%25E7%25BB%258F%25E5%2585%25B8%25EF%25BC%258C%25E6%2589%258D%25E7%25A7%25B0%25E4%25B8%25BA%25E3%2580%258A%25E8%25AF%2597%25E7%25BB%258F%25E3%2580%258B%25E3%2580%2582%25E3%2580%258A%25E8%25AF%2597%25E7%25BB%258F%25E3%2580%258B%25E6%258C%2589%25E3%2580%258A%253Ca+target%253D%2522_blank%2522+href%253D%2522http%253A%252F%252Fbaike.baidu.com%252Fsubview%252F17988%252F9154690.htm%2522%253E%25E9%25A3%258E%253C%252Fa%253E%25E3%2580%258B%25E3%2580%2581%25E3%2580%258A%253Ca+target%253D%2522_blank%2522+href%253D%2522http%253A%252F%252Fbaike.baidu.com%252Fsubview%252F7750%252F6317254.htm%2522%253E%25E9%259B%2585%253C%252Fa%253E%25E3%2580%258B%25E3%2580%2581%25E3%2580%258A%253Ca+target%253D%2522_blank%2522+href%253D%2522http%253A%252F%252Fbaike.baidu.com%252Fview%252F354624.htm%2522%253E%25E9%25A2%2582%253C%252Fa%253E%25E3%2580%258B%25E4%25B8%2589%25E7%25B1%25BB%25E7%25BC%2596%25E8%25BE%2591%25E3%2580%2582%25E3%2580%258A%25E9%25A3%258E%25E3%2580%258B%25E6%2598%25AF%25E5%2591%25A8%25E4%25BB%25A3%25E5%2590%2584%25E5%259C%25B0%25E7%259A%2584%25E6%25AD%258C%25E8%25B0%25A3%25EF%25BC%259B%25E3%2580%258A%25E9%259B%2585%25E3%2580%258B%25E6%2598%25AF%25E5%2591%25A8%25E4%25BA%25BA%25E7%259A%2584%25E6%25AD%25A3%25E5%25A3%25B0%25E9%259B%2585%25E4%25B9%2590%25EF%25BC%258C%25E5%258F%2588%25E5%2588%2586%25E3%2580%258A%253Ca+target%253D%2522_blank%2522+href%253D%2522http%253A%252F%252Fbaike.baidu.com%252Fview%252F393987.htm%2522%253E%25E5%25B0%258F%25E9%259B%2585%253C%252Fa%253E%25E3%2580%258B%25E5%2592%258C%25E3%2580%258A%253Ca+target%253D%2522_blank%2522+href%253D%2522http%253A%252F%252Fbaike.baidu.com%252Fview%252F196081.htm%2522%253E%25E5%25A4%25A7%25E9%259B%2585%253C%252Fa%253E%25E3%2580%258B%25EF%25BC%259B%25E3%2580%258A%25E9%25A2%2582%25E3%2580%258B%25E6%2598%25AF%25E5%2591%25A8%25E7%258E%258B%25E5%25BA%25AD%25E5%2592%258C%25E8%25B4%25B5%25E6%2597%258F%25E5%25AE%2597%25E5%25BA%2599%25E7%25A5%25AD%25E7%25A5%2580%25E7%259A%2584%25E4%25B9%2590%25E6%25AD%258C%25EF%25BC%258C%25E5%258F%2588%25E5%2588%2586%25E4%25B8%25BA%25E3%2580%258A%253Ca+target%253D%2522_blank%2522+href%253D%2522http%253A%252F%252Fbaike.baidu.com%252Fview%252F234728.htm%2522%253E%25E5%2591%25A8%25E9%25A2%2582%253C%252Fa%253E%25E3%2580%258B%25E3%2580%2581%25E3%2580%258A%253Ca+target%253D%2522_blank%2522+href%253D%2522http%253A%252F%252Fbaike.baidu.com%252Fview%252F500020.htm%2522%253E%25E9%25B2%2581%25E9%25A2%2582%253C%252Fa%253E%25E3%2580%258B%25E5%2592%258C%25E3%2580%258A%253Ca+target%253D%2522_blank%2522+href%253D%2522http%253A%252F%252Fbaike.baidu.com%252Fview%252F469791.htm%2522%253E%25E5%2595%2586%25E9%25A2%2582%253C%252Fa%253E%25E3%2580%258B%253C%252Fp%253E&amp;contentSourceUrl=&amp;digest=%25E8%25AF%2597%25E7%25BB%258F%25E3%2580%258B%25E4%25BD%259C%25E8%2580%2585%25E4%25BD%259A%25E5%2590%258D%25EF%25BC%258C%25E4%25BC%25A0%25E4%25B8%25BA%25E5%25B0%25B9%25E5%2590%2589%25E7%2594%25AB%25E9%2587%2587%25E9%259B%2586%25E3%2580%2581%25E5%25AD%2594%25E5%25AD%2590%25E7%25BC%2596%25E8%25AE%25A2%25E3%2580%2582%25E6%259C%2580%25E5%2588%259D%25E5%258F%25AA%25E7%25A7%25B0%25E4%25B8%25BA%25E2%2580%259C%25E8%25AF%2597%25E2%2580%259D%25E6%2588%2596%25E2%2580%259C%25E8%25AF%2597%25E4%25B8%2589%25E7%2599%25BE%25E2%2580%259D%25EF%25BC%258C%25E5%2588%25B0%25E8%25A5%25BF%25E6%25B1%2589%25E6%2597%25B6%25EF%25BC%258C%25E8%25A2%25AB%25E5%25B0%258A%25E4%25B8%25BA%25E5%2584%2592%25E5%25AE%25B6%25E7%25BB%258F%25E5%2585%25B8%25EF%25BC%258C%25E6%2589%258D%25E7%25A7%25B0%25E4%25B8%25BA%25E3%2580%258A%25E8%25AF%2597%25E7%25BB%258F%25E3%2580%258B&amp;showCoverPic=0&amp;thumbUrl=http%253A%252F%252F7xpt07.com1.z0.glb.clouddn.com%252FFnPOzOn7RpxcIMS5kVlZWyDsPmcG&amp;title=%25E4%25B8%258D%25E7%259F%25A5/show/1&quot;, &quot;title&quot;: &quot;不知&quot;, &quot;author&quot;: &quot;小明&quot;, &quot;digest&quot;: &quot;诗经》作者佚名，传为尹吉甫采集、孔子编订。最初只称为“诗”或“诗三百”，到西汉时，被尊为儒家经典，才称为《诗经》&quot;, &quot;content&quot;: &quot;&lt;p&gt;《诗经》作者佚名，传为&lt;a target=\&quot;_blank\&quot; href=\&quot;http://baike.baidu.com/view/29545.htm\&quot;&gt;尹吉甫&lt;/a&gt;采集、&lt;a target=\&quot;_blank\&quot; href=\&quot;http://baike.baidu.com/subview/2176/5070682.htm\&quot;&gt;孔子&lt;/a&gt;编订。最初只称为“诗”或“诗三百”，到&lt;a target=\&quot;_blank\&quot; href=\&quot;http://baike.baidu.com/view/20338.htm\&quot;&gt;西汉&lt;/a&gt;时，被尊为儒家经典，才称为《诗经》。《诗经》按《&lt;a target=\&quot;_blank\&quot; href=\&quot;http://baike.baidu.com/subview/17988/9154690.htm\&quot;&gt;风&lt;/a&gt;》、《&lt;a target=\&quot;_blank\&quot; href=\&quot;http://baike.baidu.com/subview/7750/6317254.htm\&quot;&gt;雅&lt;/a&gt;》、《&lt;a target=\&quot;_blank\&quot; href=\&quot;http://baike.baidu.com/view/354624.htm\&quot;&gt;颂&lt;/a&gt;》三类编辑。《风》是周代各地的歌谣；《雅》是周人的正声雅乐，又分《&lt;a target=\&quot;_blank\&quot; href=\&quot;http://baike.baidu.com/view/393987.htm\&quot;&gt;小雅&lt;/a&gt;》和《&lt;a target=\&quot;_blank\&quot; href=\&quot;http://baike.baidu.com/view/196081.htm\&quot;&gt;大雅&lt;/a&gt;》；《颂》是周王庭和贵族宗庙祭祀的乐歌，又分为《&lt;a target=\&quot;_blank\&quot; href=\&quot;http://baike.baidu.com/view/234728.htm\&quot;&gt;周颂&lt;/a&gt;》、《&lt;a target=\&quot;_blank\&quot; href=\&quot;http://baike.baidu.com/view/500020.htm\&quot;&gt;鲁颂&lt;/a&gt;》和《&lt;a target=\&quot;_blank\&quot; href=\&quot;http://baike.baidu.com/view/469791.htm\&quot;&gt;商颂&lt;/a&gt;》&lt;/p&gt;&quot;, &quot;thumbUrl&quot;: &quot;http://7xpt07.com1.z0.glb.clouddn.com/FnPOzOn7RpxcIMS5kVlZWyDsPmcG&quot;, &quot;showCoverPic&quot;: 0, &quot;contentSourceUrl&quot;: &quot;&quot;}, {&quot;url&quot;: &quot;http://114.64.253.85:10101/materials/author=%25E6%259C%25BA%25E5%2599%25A8%25E4%25BA%25BA&amp;content=%253Cp%253E%253Ca+target%253D%2522_blank%2522+href%253D%2522http%253A%252F%252Fbaike.baidu.com%252Fsubview%252F2176%252F5070682.htm%2522%253E%25E5%25AD%2594%25E5%25AD%2590%253C%252Fa%253E%25E6%259B%25BE%25E6%25A6%2582%25E6%258B%25AC%25E3%2580%258A%25E8%25AF%2597%25E7%25BB%258F%25E3%2580%258B%25E5%25AE%2597%25E6%2597%25A8%25E4%25B8%25BA%25E2%2580%259C%25E6%2597%25A0%25E9%2582%25AA%25E2%2580%259D%25EF%25BC%258C%25E5%25B9%25B6%25E6%2595%2599%25E8%2582%25B2%25E5%25BC%259F%25E5%25AD%2590%25E8%25AF%25BB%25E3%2580%258A%25E8%25AF%2597%25E7%25BB%258F%25E3%2580%258B%25E4%25BB%25A5%25E4%25BD%259C%25E4%25B8%25BA%25E7%25AB%258B%25E8%25A8%2580%25E3%2580%2581%25E7%25AB%258B%25E8%25A1%258C%25E7%259A%2584%25E6%25A0%2587%25E5%2587%2586%25E3%2580%2582%25E5%2585%2588%25E7%25A7%25A6%25E8%25AF%25B8%25E5%25AD%2590%25E4%25B8%25AD%25EF%25BC%258C%25E5%25BC%2595%25E7%2594%25A8%25E3%2580%258A%25E8%25AF%2597%25E7%25BB%258F%25E3%2580%258B%25E8%2580%2585%25E9%25A2%2587%25E5%25A4%259A%25EF%25BC%258C%25E5%25A6%2582%25E5%25AD%259F%25E5%25AD%2590%25E3%2580%2581%25E8%258D%2580%25E5%25AD%2590%25E3%2580%2581%25E5%25A2%25A8%25E5%25AD%2590%25E3%2580%2581%25E5%25BA%2584%25E5%25AD%2590%25E3%2580%2581%25E9%259F%25A9%25E9%259D%259E%25E5%25AD%2590%25E7%25AD%2589%25E4%25BA%25BA%25E5%259C%25A8%25E8%25AF%25B4%25E7%2590%2586%25E8%25AE%25BA%25E8%25AF%2581%25E6%2597%25B6%25EF%25BC%258C%25E5%25A4%259A%25E5%25BC%2595%25E8%25BF%25B0%25E3%2580%258A%25E8%25AF%2597%25E7%25BB%258F%25E3%2580%258B%25E4%25B8%25AD%25E7%259A%2584%25E5%258F%25A5%25E5%25AD%2590%25E4%25BB%25A5%25E5%25A2%259E%25E5%25BC%25BA%25E8%25AF%25B4%25E6%259C%258D%25E5%258A%259B%25E3%2580%2582%25E5%2590%258E%25E6%259D%25A5%25EF%25BC%258C%25E3%2580%258A%25E8%25AF%2597%25E7%25BB%258F%25E3%2580%258B%25E8%25A2%25AB%25E5%2584%2592%25E5%25AE%25B6%25E5%25A5%2589%25E4%25B8%25BA%25E7%25BB%258F%25E5%2585%25B8%25EF%25BC%258C%25E6%2588%2590%25E4%25B8%25BA%25E3%2580%258A%25E5%2585%25AD%25E7%25BB%258F%25E3%2580%258B%25E5%258F%258A%25E3%2580%258A%25E4%25BA%2594%25E7%25BB%258F%25E3%2580%258B%25E4%25B9%258B%25E4%25B8%2580%253C%252Fp%253E&amp;contentSourceUrl=&amp;digest=%25E5%25AD%2594%25E5%25AD%2590%25E6%259B%25BE%25E6%25A6%2582%25E6%258B%25AC%25E3%2580%258A%25E8%25AF%2597%25E7%25BB%258F%25E3%2580%258B%25E5%25AE%2597%25E6%2597%25A8%25E4%25B8%25BA%25E2%2580%259C%25E6%2597%25A0%25E9%2582%25AA%25E2%2580%259D%25EF%25BC%258C%25E5%25B9%25B6%25E6%2595%2599%25E8%2582%25B2%25E5%25BC%259F%25E5%25AD%2590%25E8%25AF%25BB%25E3%2580%258A%25E8%25AF%2597%25E7%25BB%258F%25E3%2580%258B%25E4%25BB%25A5%25E4%25BD%259C%25E4%25B8%25BA%25E7%25AB%258B%25E8%25A8%2580%25E3%2580%2581%25E7%25AB%258B%25E8%25A1%258C%25E7%259A%2584%25E6%25A0%2587%25E5%2587%2586&amp;showCoverPic=0&amp;thumbUrl=http%253A%252F%252F7xpt07.com1.z0.glb.clouddn.com%252FFpvhzJh18AebuX5lAO1t0CFtjlgk&amp;title=Ruby%25E5%2585%2583%25E7%25BC%2596%25E7%25A8%258B/show/2&quot;, &quot;title&quot;: &quot;Ruby元编程&quot;, &quot;author&quot;: &quot;机器人&quot;, &quot;digest&quot;: &quot;孔子曾概括《诗经》宗旨为“无邪”，并教育弟子读《诗经》以作为立言、立行的标准&quot;, &quot;content&quot;: &quot;&lt;p&gt;&lt;a target=\&quot;_blank\&quot; href=\&quot;http://baike.baidu.com/subview/2176/5070682.htm\&quot;&gt;孔子&lt;/a&gt;曾概括《诗经》宗旨为“无邪”，并教育弟子读《诗经》以作为立言、立行的标准。先秦诸子中，引用《诗经》者颇多，如孟子、荀子、墨子、庄子、韩非子等人在说理论证时，多引述《诗经》中的句子以增强说服力。后来，《诗经》被儒家奉为经典，成为《六经》及《五经》之一&lt;/p&gt;&quot;, &quot;thumbUrl&quot;: &quot;http://7xpt07.com1.z0.glb.clouddn.com/FpvhzJh18AebuX5lAO1t0CFtjlgk&quot;, &quot;showCoverPic&quot;: 0, &quot;contentSourceUrl&quot;: &quot;&quot;}]" />-->
-<input type="hidden" name="material_content" id="material_content" value="[{&quot;url&quot;: &quot;http://114.64.253.85:10101/materials/author=%25E8%2580%2581%25E8%2588%258D&amp;content=%253Cp%253E%253Cspan+class%253D%2522Apple-tab-span%2522+style%253D%2522white-space%253Apre%2522%253E%2509%2509%253C%252Fspan%253Ea%2529+%25E7%25B4%25A0%25E6%259D%2590%25E7%259A%2584%25E5%25B1%2595%25E7%25A4%25BA%25EF%25BC%2588%25E5%259F%25BA%25E6%259C%25AC%25E4%25BF%25A1%25E6%2581%25AF%25EF%25BC%258C%25E5%2588%259B%25E5%25BB%25BA%25E4%25BA%25BA%25E7%25AD%2589%25EF%25BC%2589%253C%252Fp%253E%253Cp%253E%253Cspan+class%253D%2522Apple-tab-span%2522+style%253D%2522white-space%253Apre%2522%253E%2509%2509%253C%252Fspan%253Eb%2529+%25E7%25B4%25A0%25E6%259D%2590%25E7%259A%2584%25E4%25B8%258A%25E4%25BC%25A0%25E4%25BF%25A1%25E6%2581%25AF%25E5%258F%258A%25E4%25B8%258A%25E4%25BC%25A0%25E5%258A%259F%25E8%2583%25BD%25EF%25BC%2588%25E6%2598%25BE%25E7%25A4%25BA%25E5%25B7%25B2%25E7%25BB%258F%25E4%25B8%258A%25E4%25BC%25A0%25E7%259A%2584%25E5%25BE%25AE%25E4%25BF%25A1%25E5%258F%25B7%25E5%258F%258A%25E5%2585%2581%25E8%25AE%25B8%25E4%25B8%258A%25E4%25BC%25A0%25E5%2588%25B0%25E5%25BE%25AE%25E4%25BF%25A1%25E5%258F%25B7%25EF%25BC%2589%253C%252Fp%253E%253Cp%253E%253Cbr%252F%253E%253C%252Fp%253E&amp;contentSourceUrl=&amp;digest=%25E4%25BB%258A%25E5%25A4%25A9%25E5%25A4%25A9%25E6%25B0%2594%25E6%258C%25BA%25E5%25A5%25BD%25E7%259A%2584&amp;showCoverPic=0&amp;thumbUrl=http%253A%252F%252F7xpt07.com1.z0.glb.clouddn.com%252FFnbnLEBt9G2TGrrvoWJaPOVXRq2t&amp;title=%25E9%2598%25B3%25E5%2585%2589%25E6%2598%258E%25E5%25AA%259A/show/0&quot;, &quot;title&quot;: &quot;阳光明媚&quot;, &quot;author&quot;: &quot;老舍&quot;, &quot;digest&quot;: &quot;今天天气挺好的&quot;, &quot;content&quot;: &quot;&lt;p&gt;&lt;span class=\&quot;Apple-tab-span\&quot; style=\&quot;white-space:pre\&quot;&gt;\t\t&lt;/span&gt;a) 素材的展示（基本信息，创建人等）&lt;/p&gt;&lt;p&gt;&lt;span class=\&quot;Apple-tab-span\&quot; style=\&quot;white-space:pre\&quot;&gt;\t\t&lt;/span&gt;b) 素材的上传信息及上传功能（显示已经上传的微信号及允许上传到微信号）&lt;/p&gt;&lt;p&gt;&lt;br/&gt;&lt;/p&gt;&quot;, &quot;thumbUrl&quot;: &quot;http://7xpt07.com1.z0.glb.clouddn.com/FnbnLEBt9G2TGrrvoWJaPOVXRq2t&quot;, &quot;showCoverPic&quot;: 0, &quot;contentSourceUrl&quot;: &quot;&quot;}]" />
+<input type="hidden" name="material_content" id="material_content"
+       value="[{&quot;url&quot;: &quot;http://114.64.253.85:10101/materials/author=%25E8%2580%2581%25E8%2588%258D&amp;content=%253Cp%253E%253Cspan+class%253D%2522Apple-tab-span%2522+style%253D%2522white-space%253Apre%2522%253E%2509%2509%253C%252Fspan%253Ea%2529+%25E7%25B4%25A0%25E6%259D%2590%25E7%259A%2584%25E5%25B1%2595%25E7%25A4%25BA%25EF%25BC%2588%25E5%259F%25BA%25E6%259C%25AC%25E4%25BF%25A1%25E6%2581%25AF%25EF%25BC%258C%25E5%2588%259B%25E5%25BB%25BA%25E4%25BA%25BA%25E7%25AD%2589%25EF%25BC%2589%253C%252Fp%253E%253Cp%253E%253Cspan+class%253D%2522Apple-tab-span%2522+style%253D%2522white-space%253Apre%2522%253E%2509%2509%253C%252Fspan%253Eb%2529+%25E7%25B4%25A0%25E6%259D%2590%25E7%259A%2584%25E4%25B8%258A%25E4%25BC%25A0%25E4%25BF%25A1%25E6%2581%25AF%25E5%258F%258A%25E4%25B8%258A%25E4%25BC%25A0%25E5%258A%259F%25E8%2583%25BD%25EF%25BC%2588%25E6%2598%25BE%25E7%25A4%25BA%25E5%25B7%25B2%25E7%25BB%258F%25E4%25B8%258A%25E4%25BC%25A0%25E7%259A%2584%25E5%25BE%25AE%25E4%25BF%25A1%25E5%258F%25B7%25E5%258F%258A%25E5%2585%2581%25E8%25AE%25B8%25E4%25B8%258A%25E4%25BC%25A0%25E5%2588%25B0%25E5%25BE%25AE%25E4%25BF%25A1%25E5%258F%25B7%25EF%25BC%2589%253C%252Fp%253E%253Cp%253E%253Cbr%252F%253E%253C%252Fp%253E&amp;contentSourceUrl=&amp;digest=%25E4%25BB%258A%25E5%25A4%25A9%25E5%25A4%25A9%25E6%25B0%2594%25E6%258C%25BA%25E5%25A5%25BD%25E7%259A%2584&amp;showCoverPic=0&amp;thumbUrl=http%253A%252F%252F7xpt07.com1.z0.glb.clouddn.com%252FFnbnLEBt9G2TGrrvoWJaPOVXRq2t&amp;title=%25E9%2598%25B3%25E5%2585%2589%25E6%2598%258E%25E5%25AA%259A/show/0&quot;, &quot;title&quot;: &quot;阳光明媚&quot;, &quot;author&quot;: &quot;老舍&quot;, &quot;digest&quot;: &quot;今天天气挺好的&quot;, &quot;content&quot;: &quot;&lt;p&gt;&lt;span class=\&quot;Apple-tab-span\&quot; style=\&quot;white-space:pre\&quot;&gt;\t\t&lt;/span&gt;a) 素材的展示（基本信息，创建人等）&lt;/p&gt;&lt;p&gt;&lt;span class=\&quot;Apple-tab-span\&quot; style=\&quot;white-space:pre\&quot;&gt;\t\t&lt;/span&gt;b) 素材的上传信息及上传功能（显示已经上传的微信号及允许上传到微信号）&lt;/p&gt;&lt;p&gt;&lt;br/&gt;&lt;/p&gt;&quot;, &quot;thumbUrl&quot;: &quot;http://7xpt07.com1.z0.glb.clouddn.com/FnbnLEBt9G2TGrrvoWJaPOVXRq2t&quot;, &quot;showCoverPic&quot;: 0, &quot;contentSourceUrl&quot;: &quot;&quot;}]"/>
 <!--js通过cdn引用-->
 <script src="http://cdn.bootcss.com/jquery/2.2.3/jquery.js"></script>
 <script src="js/handlebars.js"></script>
@@ -78,67 +71,71 @@
 
 </script>
 <script type="text/javascript">
-    $(function(){
+    $(function () {
         var strData = $("#material_content").val();
         //        字符串类型转换成json对象
-        var jsonData = eval("("+strData+")");
+        var jsonData = eval("(" + strData + ")");
 
-        function simulatorInit(){
+        function simulatorInit() {
             $(".sim_wrapper").show();
             //默认关闭详情页
             $("#page_detail").hide();
             console.log(jsonData);
-            var templateSection = jsonData.length>1 ? $("#simulator_multi_pic") : $("#simulator_single_pic");
-            doTemplate(templateSection,jsonData);
+            var templateSection = jsonData.length > 1 ? $("#simulator_multi_pic") : $("#simulator_single_pic");
+            doTemplate(templateSection, jsonData);
         }
+
         //模板套用函数
-        function doTemplate(temp,data){
+        function doTemplate(temp, data) {
             var sourceCode = temp.html();
             var template = Handlebars.compile(sourceCode);
             var targetCode = template(data);
             temp.replaceWith(targetCode);
         }
-        function doTempPage(idx){
+
+        function doTempPage(idx) {
             //打开内容页
-            $("#page_detail").fadeIn(500);
+            var _page_detail = $("#page_detail");
+            _page_detail.fadeIn(500);
             //重置内容页
-            $("#page_detail").html();
+            _page_detail.html();
             var data = jsonData[idx];
-            var _html = "";
-            html =  '<div class="wx_phone_preview_appmsg appmsg_wap">'+
-                        '<div class="rich_media">'+
-                            '<div class="rich_media_area_primary">'+
-                                '<h2 class="rich_media_title" title="">'+data.title+'</h2>'+
-                                '<div class="rich_media_meta_list">'+
-                                    '<em class="rich_media_meta rich_media_meta_text">2016-06-02</em>'+
-                                    '<em class="rich_media_meta rich_media_meta_text">'+data.author+'</em>'+
-                                '</div>'+
-                                '<div class="rich_media_content">'+data.content+'</div>'+
-                            '</div>'+
-                        '</div>'+
-                    '</div>'
-            $("#page_detail").html(html);
+            var html = "";
+            html = '<div class="wx_phone_preview_appmsg appmsg_wap">' +
+                    '<div class="rich_media">' +
+                    '<div class="rich_media_area_primary">' +
+                    '<h2 class="rich_media_title" title="">' + data.title + '</h2>' +
+                    '<div class="rich_media_meta_list">' +
+                    '<em class="rich_media_meta rich_media_meta_text">2016-06-02</em>' +
+                    '<em class="rich_media_meta rich_media_meta_text">' + data.author + '</em>' +
+                    '</div>' +
+                    '<div class="rich_media_content">' + data.content + '</div>' +
+                    '</div>' +
+                    '</div>' +
+                    '</div>';
+            _page_detail.html(html);
         }
+
         //模拟器进入详情页事件
-        $(document).on('click','.card_appmsg_item',function(){
+        $(document).on('click', '.card_appmsg_item', function () {
             $("#page_container").hide();
             var idx = $(".card_appmsg_item").index($(this)[0]);
             doTempPage(idx);
         });
         //单图文模式下进入详情页
-        $(document).on('click','.wx_phone_preview_card',function(){
+        $(document).on('click', '.wx_phone_preview_card', function () {
             $("#page_container").hide();
             doTempPage(0);
-        })
+        });
         //返回事件
-        $(".histroy_back").on("click",function(){
+        $(".histroy_back").on("click", function () {
             $("#page_detail").hide();
             $("#page_container").show();
         });
         //关闭层
-        $(".mask").on("click",function(){
+        $(".mask").on("click", function () {
             $(".sim_wrapper").fadeOut(300);
-        })
+        });
         //初始化,绑定预览事件
         simulatorInit();
     })
