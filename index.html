@@ -18,25 +18,7 @@
                 <div id="page_container">
                     <script id="simulator_single_pic" type="text/x-handlebars-template">
                         {{#each this}}
-                        <div class="msg_card wx_phone_preview_card jsPhoneViewCard" data-index="0">
-                            <div class="msg_card_inner">
-                                <div class="msg_card_bd">
-                                    <h4 class="msg_card_title" title="">{{title}}</h4>
-                                    <div class="msg_card_info">
-                                        06月01日
-                                    </div>
-                                    <div class="msg_card_extra_info"
-                                         style="background-image:url({{thumbUrl}});">
-                                        <!--<img class="appmsg_thumb" src="">-->
-                                    </div>
-                                    <div class="msg_card_desc" title="">{{digest}}</div>
-                                </div>
-                                <div class="msg_card_ft">
-                                    <i class="icon_arrow_default"></i>
-                                    阅读原文
-                                </div>
-                            </div>
-                        </div>
+                        <div class="msg_card wx_phone_preview_card jsPhoneViewCard">
                         {{/each}}
                     </script>
                     <script id="simulator_multi_pic" type="text/x-handlebars-template">
@@ -75,12 +57,11 @@
         var strData = $("#material_content").val();
         //        字符串类型转换成json对象
         var jsonData = eval("(" + strData + ")");
-
+        //初始化
         function simulatorInit() {
             $(".sim_wrapper").show();
             //默认关闭详情页
             $("#page_detail").hide();
-            console.log(jsonData);
             var templateSection = jsonData.length > 1 ? $("#simulator_multi_pic") : $("#simulator_single_pic");
             doTemplate(templateSection, jsonData);
         }
