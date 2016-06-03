@@ -1,0 +1,270 @@
+body {
+    line-height: 1.6;
+    font-family: "Helvetica Neue","Hiragino Sans GB","Microsoft YaHei","\9ED1\4F53",Arial,sans-serif;
+    color: #222;
+    font-size: 14px;
+}
+.wx_phone_preview {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    margin-top: -365px;
+    margin-left: -180px;
+    z-index: 9997;
+    width: 360px;
+    height: 680px;
+    background: url("../img/phone_view_bg.png") 0 0 no-repeat;
+}
+/*.wx_phone {
+    padding: 84px 56px 0 17px;
+}*/
+.wx_phone {
+    padding: 64px 56px 0 17px;
+}
+.wx_phone_hd {
+    text-align: center;
+    color: #fff;
+    line-height: 38px;
+    height: 38px;
+    width: auto;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    word-wrap: normal;
+}
+.wx_phone_hd .histroy_back{
+    display: block;
+    width: 32px;
+    height: 32px;
+    background-image: url("../img/backicon.png");
+    background-repeat: no-repeat;
+    cursor: pointer;
+}
+.wx_phone_preview_card_wrp{	
+	position: relative;
+    overflow: auto;
+    background-color: #f2f2f2;
+    height: 470px;
+}
+.wx_phone_preview_card {
+    padding: 15px;
+    cursor: pointer;
+}
+.msg_card_inner{
+	overflow: hidden;
+    border: 1px solid #e7e7eb;
+    border-radius: 3px;
+    -moz-border-radius: 3px;
+    -webkit-border-radius: 3px;
+    background-color: #fff;
+}
+.wx_phone_preview_card .msg_card_bd {
+    padding: 8px;
+}
+.msg_card_title {
+    overflow: hidden;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 16px;
+    line-height: 1.2;
+    max-height: 2.4;
+    word-wrap: normal;
+    white-space: pre-wrap;
+}
+.wx_phone_preview_card .msg_card_title {
+    margin-bottom: 6px;
+    max-height: 40px;
+    font-size: 14px;
+}
+.msg_card_info {
+    font-size: 13px;
+    line-height: 20px;
+    margin-bottom: 12px;
+    color: #8d8d8d;
+}
+.wx_phone_preview_card .msg_card_desc {
+    max-height: 42px;
+    overflow: hidden;
+    font-size: 12px;
+}
+.msg_card_desc {
+    word-wrap: normal;
+    white-space: pre-wrap;
+}
+.wx_phone_preview_card {
+    padding: 15px;
+    cursor: pointer;
+}
+.msg_card_ft {
+    background-color: #f4f5f9;
+    border-top: 1px solid #e7e7eb;
+}
+.wx_phone_preview_card .msg_card_ft {
+    background-color: #fff;
+    line-height: 38px;
+    padding: 0;
+    margin: 0 8px;
+    font-size: 12px;
+}
+.wx_phone_preview_card .msg_card_ft .icon_arrow_default {
+    float: right;
+    margin-top: 10px;
+}
+.wx_phone_preview_multi_card {
+    padding: 15px;
+    cursor: pointer;
+}
+.dn {
+    display: none;
+}
+.icon_arrow_default {
+    background: url("../img/phone_icons.png") 0 -3403px no-repeat;
+    width: 16px;
+    height: 15px;
+    vertical-align: middle;
+    display: inline-block;
+    line-height: 300px;
+    overflow: hidden;
+}
+.msg_card_extra_info {
+    height: 120px;
+    overflow: hidden;
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;
+    margin: 14px 0 5px;
+}
+.card_cover_appmsg_item {
+    margin: 6px;
+    position: relative;
+}
+.wx_phone_preview_multi_card.has_first_cover .card_cover_title {
+    position: absolute;
+    max-height: 42px;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: rgba(0,0,0,0.5)!important;
+    filter: progid:DXImageTransform.Microsoft.gradient(GradientType=0,startColorstr='#80000000',endcolorstr = '#80000000');
+    color: #fff;
+    padding: 5px 6px;
+}
+.wx_phone_preview_multi_card .card_cover_title {
+    font-weight: 400;
+}
+.card_cover_appmsg_inner {
+    position: relative;
+    height: 140px;
+    overflow: hidden;
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;
+}
+.wx_phone_preview_multi_card {
+    padding: 15px;
+    cursor: pointer;
+}
+.wx_phone_preview_multi_card .card_appmsg_thumb {
+    float: right;
+    margin-left: 10px;
+    width: 45px;
+    height: 45px;
+}
+.wx_phone_preview_multi_card .card_appmsg_content {
+    overflow: hidden;
+}
+.wx_phone_preview_multi_card .card_appmsg_item {
+    overflow: hidden;
+    padding: 6px;
+    border-top: 1px solid #e7e7eb;
+    position: relative;
+}
+.card_appmsg_item:first-child img{
+    width: 100%;
+    height: 140px;
+}
+.card_appmsg_item:first-child .card_appmsg_content{
+    position: absolute;
+    max-height: 42px;
+    bottom: 6px;
+    left: 6px;
+    right: 6px;
+    background: rgba(0,0,0,0.5)!important;
+    filter: progid:DXImageTransform.Microsoft.gradient(GradientType=0,startColorstr='#80000000',endcolorstr = '#80000000');
+    color: #fff;
+    padding: 5px 6px;
+}
+
+.wx_phone_bd {
+    position: relative;
+    overflow: auto;
+    background-color: #fff;
+    height: 470px;
+}
+.wx_phone_preview_appmsg {
+    padding: 15px 10px;
+}
+.appmsg_wap * {
+    margin: 0;
+    padding: 0;
+}
+.appmsg_wap .rich_media_title {
+    margin-bottom: 12px;
+    line-height: 1.4;
+    font-weight: 400;
+    font-size: 16px;
+}
+.appmsg_wap .rich_media_meta_list {
+    margin-bottom: 18px;
+    line-height: 20px;
+}
+.appmsg_wap .rich_media_content {
+    overflow: hidden;
+    color: #3e3e3e;
+}
+.appmsg_wap .rich_media_content {
+    word-wrap: break-word;
+    word-break: break-all;
+}
+.appmsg_wap .rich_media_content p {
+    clear: both;
+    min-height: 1em;
+    white-space: pre-wrap;
+}
+.appmsg_wap .rich_media_content * {
+    max-width: 100%!important;
+    box-sizing: border-box!important;
+    -webkit-box-sizing: border-box!important;
+    word-wrap: break-word!important;
+}
+.appmsg_wap .rich_media_meta_text {
+    color: #8c8c8c;
+    font-weight: 400;
+    font-style: normal;
+}
+.appmsg_wap .rich_media_meta_text {
+    color: #8c8c8c;
+    font-weight: 400;
+    font-style: normal;
+}
+.appmsg_wap .rich_media_meta_link {
+    color: #607fa6;
+    cursor: pointer;
+}
+.wx_phone_preview_wrp .mask {
+    z-index: 9995;
+}
+
+.mask {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    filter: alpha(opacity = 75);
+    -moz-opacity: .75;
+    -khtml-opacity: .75;
+    opacity: .75;
+    background-color: #000;
+    z-index: 9995;
+}
