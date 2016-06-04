@@ -43,10 +43,49 @@ Simulator.prototype = {
         if(this.opts.showMenu){
            var strJson = $("#menu_content").val();
             this.menuJsonData = eval('(' + strJson + ')');
+            this.menuJsonData = JSON.parse(strJson);
+            this.doMenuTemplate();
         }
     },
     doMenuTemplate:function(){
+        var temp = "";
+        var tempSec = "";
+        var data = this.menuJsonData.button_list;
+        console.log(data);
+        $.each(data,function(i,item){
+            var tempSub = "";
+            $.each(item.sub_button_list,function(i,item){
+                tempSub += '<li id="subMenu_menu_0_0">'+
+                    '<a href="javascript:void(0);" class="jsSubView"  draggable="false">'+item.name+'</a>'+
+                    '</li>'
+            });
+            tempSec +=
+                '<li class="pre_menu_item grid_item size1of3 jsViewLi " id="menu_0">'+
+                '<a href="javascript:void(0);" class="jsView pre_menu_link" title="根菜单1" draggable="false">'+
 
+                '<i class="icon_menu_dot"></i>'+ item.name+
+                '</a>'+
+
+                '<div class="sub_pre_menu_box jsSubViewDiv" style="display:none">'+
+                '<ul class="sub_pre_menu_list">'+tempSub+
+
+                /*<li id="subMenu_menu_0_0"><a href="javascript:void(0);" class="jsSubView" title="菜单1-1" draggable="false">菜单1-1</a></li>
+
+                <li id="subMenu_menu_0_1"><a href="javascript:void(0);" class="jsSubView" title="菜单1-2" draggable="false">菜单1-2</a></li>
+*/
+                '</ul>'+
+                '<i class="arrow arrow_out"></i>'+
+                '<i class="arrow arrow_in"></i>'+
+                '</div>'+
+
+                '</li>'
+        });
+        temp = '<div class="mobile_preview" id="mobileDiv">' +
+                '<div class="mobile_preview_ft">' +
+                    '<ul class="pre_menu_list grid_line"> '+ tempSec+'</ul>'+
+                '</div> '+
+            '</div>'
+        $("#page_bottom").html(temp);
     },
     //单图模板
     doSingleTemplate:function(){
