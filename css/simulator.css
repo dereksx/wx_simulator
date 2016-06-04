@@ -254,6 +254,13 @@ body {
 .wx_phone_preview_wrp .mask {
     z-index: 9995;
 }
+.appmsg_wap .rich_media_meta {
+    display: inline-block;
+    vertical-align: middle;
+    margin-right: 8px;
+    margin-bottom: 10px;
+    font-size: 14px;
+}
 
 .mask {
     position: fixed;

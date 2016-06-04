@@ -1,0 +1,97 @@
+.mobile_menu_preview {
+    position: relative;
+    width: 317px;
+    height: 580px;
+    background: transparent url(../img/bg_mobile_head_default2968da.png) no-repeat 0 0;
+    background-position: 0 0;
+    border: 1px solid #e7e7eb;
+}
+.mobile_menu_preview .mobile_hd {
+    color: #fff;
+    text-align: center;
+    padding-top: 30px;
+    font-size: 15px;
+    width: auto;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    word-wrap: normal;
+    margin: 0 30px;
+}
+.menu_preview_area .pre_menu_list {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    border-top: 1px solid #e7e7eb;
+    background: transparent url(../img/bg_mobile_foot_default2968da.png) no-repeat 0 0;
+    background-position: 0 0;
+    background-repeat: no-repeat;
+    padding-left: 43px;
+}
+.menu_preview_area .pre_menu_item {
+    line-height: 50px;
+}
+.pre_menu_item {
+    position: relative;
+    float: left;
+    line-height: 38px;
+    text-align: center;
+}
+.size1of3 {
+    width: 33.33%;
+}
+.grid_item {
+    float: left;
+}
+.menu_preview_area .pre_menu_item:first-child .pre_menu_link {
+    border-left-width: 0;
+}
+.pre_menu_item a {
+    display: block;
+    width: auto;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    word-wrap: normal;
+    color: #616161;
+    text-decoration: none;
+}
+.pre_menu_link {
+    border-left: 1px solid #e7e7eb;
+}
+.icon_menu_dot {
+    background: url("../img/index_z2a7519.png") 0 -48px no-repeat;
+    width: 7px;
+    height: 7px;
+    vertical-align: middle;
+    display: inline-block;
+    margin-right: 2px;
+    margin-top: -2px;
+}
+.dn {
+    display: none;
+}
+.menu_preview_area .pre_menu_list .sort_gray {
+    margin-top: -4px;
+}
+.menu_preview_area .pre_menu_list .sort_gray {
+    display: none;
+}
+.icon20_common.sort_gray {
+    background: url("../img/phone_icons.png") 0 -5809px no-repeat;
+}
+.icon20_common {
+    width: 20px;
+    height: 20px;
+    vertical-align: middle;
+    display: inline-block;
+    line-height: 100px;
+    overflow: hidden;
+}
+.icon20_common {
+    width: 20px;
+    height: 20px;
+    vertical-align: middle;
+    display: inline-block;
+}
